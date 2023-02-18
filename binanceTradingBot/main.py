@@ -177,7 +177,7 @@ def start(exchange, interval_sec):
             except Exception as e:
                 print(traceback.format_exc())
                 # 追加
-                line_notify.send("\n 何らかのエラー")
+                line_notify.send("\n 注文でエラーが発生")
                 pass
 
         # おまけ（時間アノマリーロジック）
@@ -216,7 +216,7 @@ def start(exchange, interval_sec):
 
             except Exception as e:
                 print(traceback.format_exc())
-                line_notify.send("\n 何らかのエラーが発生")
+                line_notify.send("\n 注文でエラーが発生")
                 pass
 
         if (dt_now.hour == 0) & (dt_now.minute == 2):  # 日本時間で午前9時2分
@@ -259,7 +259,7 @@ def start(exchange, interval_sec):
 
             except Exception as e:
                 print(traceback.format_exc())
-                line_notify.send("\n 何らかのエラーが発生")
+                line_notify.send("\n 注文でエラーが発生")
                 pass
 
         time.sleep(60)
