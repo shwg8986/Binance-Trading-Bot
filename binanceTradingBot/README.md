@@ -1,27 +1,32 @@
-こちらはMANAUSDT(USD Margined Perpetual)を自動売買するBotのサンプルです。
+# こちらはMANAUSDT(USD Margined Perpetual)を自動売買するBotのサンプルです。
 ロジックが簡単なため、公開しています。
 
 ### Dockerのビルド
-```bash
+```
+bash
 docker build . -t binanceTradingBot
 ```
 
 ### Dockerのコンテナを起動
-```bash
+```
+bash
 docker run -d -it --env-file=.env --name=binanceTradingBot binanceTradingBot
 ```
 
 ### Dockerの起動状況確認
-```bash
+```
+bash
 docker container logs -t binanceTradingBot
 ```
 
 ### Dockerのコンテナの停止
-```bash
+```
+bash
 docker stop binanceTradingBot
 ```
 
 ### Dockerのコンテナの削除
-```bash
+```
+bash
 docker container prune
 ```
