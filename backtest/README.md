@@ -19,6 +19,6 @@ docker-compose up -d
 
 http://localhost:8888 をブラウザで開く。
 
-## チュートリアルを開く
+## Notebookを開く
 
 Jupyter内でwork/backtest.ipynbを開く
