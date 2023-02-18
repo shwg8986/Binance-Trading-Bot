@@ -8,14 +8,9 @@ import numpy as np
 import os
 import ccxt
 import traceback
-
-# 追加
-import requests
-
 from features import features, calc_features
 
-# 追加
-
+# Lineに通知を飛ばすクラス
 
 class LineNotify:
     def __init__(self):
@@ -29,8 +24,8 @@ class LineNotify:
         msg = {"message": f" {msg}"}
         requests.post(self.line_notify_api, headers=self.headers, data=msg)
 
+        
 # BinanceのOHLCV情報を取得
-
 
 def get_binance_ohlcv(market, from_time, interval_sec, limit):
     ohlcv_list = ccxt.binance().fapiPublicGetKlines({
@@ -113,7 +108,8 @@ def order_binance(exchange, market, order_side, order_size):
     print(order)
 
 
-# ボット起動
+# ボットの起動
+
 def start(exchange, interval_sec):
 
     print("binance Bot is started!\n interval:{0}sec".format(interval_sec))
@@ -152,8 +148,6 @@ def start(exchange, interval_sec):
                     str(market_MANA), str(position_MANA['positionSide'])))
                 print("{0}のポジションサイズ:{1}".format(
                     str(market_MANA), str(position_MANA['positionAmt'])))
-
-                # line_notify.send("{0}のポジションサイド:{1}".format(str(market_MANA),str(position_MANA['positionSide'])))
                 line_notify.send("{0}のポジションサイズ:{1}".format(
                     str(market_MANA), str(position_MANA['positionAmt'])))
 
