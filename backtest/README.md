@@ -1,12 +1,13 @@
 # Backtestを行う環境の構築
 
-## Docker 
-
-Dockerを起動する。
-
 ## git clone
 
 本ファイル構成をcloneする。
+
+
+## Docker 
+
+Dockerを起動する。
 
 ## Jupyterの起動
 
