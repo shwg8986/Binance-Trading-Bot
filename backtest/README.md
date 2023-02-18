@@ -1,4 +1,4 @@
-# backtestを行う環境の構築
+# Backtestを行う環境の構築
 
 ## Docker 
 
