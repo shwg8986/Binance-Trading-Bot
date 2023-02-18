@@ -4,8 +4,6 @@ RUN pip install --upgrade pip
 
 WORKDIR /app
 
-# install required libraries
-
 RUN cd /tmp \
   && wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz \
   && tar -xvf ta-lib-0.4.0-src.tar.gz \
